@@ -1,0 +1,7 @@
+CREATE TABLE 'indexco
+mpute.person_index_his_f005'(  'index_id' string,   'index_name' string,   'index_type' string,   'object_code' string,   'object_type' string,
+   'index_code' string,   'index_value' string,  'implement_no' string,   'start_date' string,   'end_date' string,   'pindex_id' string,   'crt_date' string,branch_id string)
+   PARTITIONED BY(channel_id  string, stat_month string )
+ROW FORMAT DELIMITED FIELDS TERMINATED BY ','
+NULL DEFINED AS ''
+STORED AS PARQUET;
